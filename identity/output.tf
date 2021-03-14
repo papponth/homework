@@ -1,3 +1,4 @@
+#outputs needed for cluster creation
 output "cluster_client_id" {
   value = azuread_service_principal.cluster_sp.application_id
 }

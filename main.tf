@@ -19,12 +19,12 @@ terraform {
     }
   }
 }
-
+# module for creation service principal for k8s cluster
 module "identity" {
   source = "./identity"
   k8s_cluster_name = var.k8s_cluster_name
 }
-
+# module which creates k8s cluster
 module "aks" {
   source = "./module_for_aks"
   k8s_cluster_name = var.k8s_cluster_name
@@ -35,7 +35,7 @@ module "aks" {
   object_id = module.identity.cluster_object_id
   depends_on = [ module.identity ]
 }
-
+# module which creates ingress with helm
 module "k8s" {
   source = "./module_for_k8s"
   resource_group_name = var.resource_group_name
@@ -48,7 +48,7 @@ module "k8s" {
 #  depends_on = [ module.aks ]
   external_address = module.aks.external_address
 }
-
+# module which deploys simple application to k8s without helm
 module "app" {
   source = "./module_for_app"
   client_certificate = module.aks.client_certificate

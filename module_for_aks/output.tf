@@ -1,3 +1,4 @@
+#outputs needed for k8s cluster usage
 output "external_address" {
   value = azurerm_public_ip.load_balancer.ip_address
 }
