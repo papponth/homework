@@ -1,75 +1,75 @@
 variable "k8s_api_host" {
-  description = "value"
+  description = "API Server IP"
 }
 variable "cluster_username" {
-  description = "value"
+  description = "service account's username"
 }
 variable "cluster_password" {
-  description = "value"
+  description = "service account's password"
 }
 variable "client_certificate" {
-  description = "value"
+  description = "service account's certificate"
 }
 variable "client_key" {
-  description = "value"
+  description = "service account's key"
 }
 variable "cluster_ca_certificate" {
-  description = "value"
+  description = "service account's CA"
 }
 variable "app_name" {
-  description = "value"
+  description = "Application name"
 }
 variable "image" {
-  description = "value"
+  description = "Application's image"
 }
 variable "image_tag" {
-  description = "value"
+  description = "tag"
 }
 variable "image_pull_policy" {
-  description = "value"
+  description = "pull policy for App's image"
 }
 variable "container_port" {
-  description = "value"
+  description = "Container's exposed port"
 }
 variable "app_replicas_count" {
-  description = "value"
+  description = "neded number of replicas"
 }
 variable "service_port" {
-  description = "value"
+  description = "service port"
 }
 variable "cpu_limit" {
-  description = "value"
+  description = "CPU limit"
 }
 variable "mem_limit" {
-  description = "value"
+  description = "Memory limit"
 }
 variable "cpu_request" {
-  description = "value"
+  description = "CPU request"
 }
 variable "mem_request" {
-  description = "value"
+  description = "Memory requesr"
 }
 variable "liveness_probe_path" {
-  description = "value"
+  description = "path for liveness probe"
 }
 variable "liveness_probe_port" {
-  description = "value"
+  description = "port for liveness probe"
 }
 variable "liveness_initial_delay" {
-  description = "value"
+  description = "initial delay for liveness probe"
 }
 variable "liveness_probe_period" {
-  description = "value"
+  description = "liveness probe period in sec"
 }
 variable "readiness_probe_path" {
-  description = "value"
+  description = "readiness probe path"
 }
 variable "readiness_probe_port" {
-  description = "value"
+  description = "readiness probe port"
 }
 variable "readiness_initial_delay" {
-  description = "value"
+  description = "readiness initial delay in sec"
 }
 variable "readiness_probe_period" {
-  description = "value"
+  description = "readiness probe period in sec"
 }
