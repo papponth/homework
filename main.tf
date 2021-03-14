@@ -40,7 +40,6 @@ module "k8s" {
   source = "./module_for_k8s"
   resource_group_name = var.resource_group_name
   client_certificate = module.aks.client_certificate
-  kube_config = module.aks.kube_config
   client_key = module.aks.client_key
   cluster_ca_certificate = module.aks.cluster_ca_certificate
   cluster_username = module.aks.cluster_username
@@ -52,9 +51,7 @@ module "k8s" {
 
 module "app" {
   source = "./module_for_app"
-  resource_group_name = var.resource_group_name
   client_certificate = module.aks.client_certificate
-  kube_config = module.aks.kube_config
   client_key = module.aks.client_key
   cluster_ca_certificate = module.aks.cluster_ca_certificate
   cluster_username = module.aks.cluster_username
@@ -62,6 +59,7 @@ module "app" {
   k8s_api_host = module.aks.host
   app_name = var.app_name
   image = var.image
+  image_tag = var.image_tag
   image_pull_policy = var.image_pull_policy
   app_replicas_count = var.app_replicas_count
   container_port = var.container_port

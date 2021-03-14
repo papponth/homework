@@ -7,9 +7,6 @@ variable "resource_group_name" {
 variable "client_certificate" {
   description = "value"
 }
-variable "kube_config" {
-  description = "value"
-}
 variable "client_key" {
   description = "value"
 }

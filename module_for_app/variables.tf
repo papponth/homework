@@ -1,7 +1,28 @@
+variable "k8s_api_host" {
+  description = "value"
+}
+variable "cluster_username" {
+  description = "value"
+}
+variable "cluster_password" {
+  description = "value"
+}
+variable "client_certificate" {
+  description = "value"
+}
+variable "client_key" {
+  description = "value"
+}
+variable "cluster_ca_certificate" {
+  description = "value"
+}
 variable "app_name" {
   description = "value"
 }
 variable "image" {
+  description = "value"
+}
+variable "image_tag" {
   description = "value"
 }
 variable "image_pull_policy" {

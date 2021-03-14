@@ -26,6 +26,9 @@ variable "app_name" {
 variable "image" {
   description = "value"
 }
+variable "image_tag" {
+  description = "value"
+}
 variable "image_pull_policy" {
   description = "value"
 }

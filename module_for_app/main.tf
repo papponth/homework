@@ -31,7 +31,7 @@ resource "kubernetes_deployment" "app_deploy" {
       }
       spec {
         container {
-          image = var.image
+          image = "${var.image}:${var.image_tag}"
           name  = var.app_name
           image_pull_policy = var.image_pull_policy
           port {
